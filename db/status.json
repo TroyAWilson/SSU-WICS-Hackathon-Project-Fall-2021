@@ -1,0 +1,7 @@
+{
+    "SAFE": 0,
+    "EVAC_ZONE": 1,
+    "EVACUATING": 2,
+    "EVACUATED": 3,
+    "DANGER": 5
+}

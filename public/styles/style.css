@@ -1,0 +1,160 @@
+/* Colors
+CE2D4F : Red
+BD3364 : Raspberry
+AB3879 : Fuschia
+8742A2 : Purple
+4056F4 : Indigo
+*/
+
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    padding:1%;
+    margin: 1%;
+    /* display: flex; */
+
+}
+.header-background{
+    background-image: linear-gradient(to right, #CE2D4F, #8742A2);
+    color:white;
+}
+
+.fire-img{
+    height: 35px;
+    width: 35px;
+}
+
+#map{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height:85%;
+}
+h2 {
+    font-weight: normal !important;
+}
+
+.check-in-button, .find-shelter-button,.shelter-reg-button, .map-page-button{
+    background-color: #CE2D4F;
+    border: none;
+    color: white;
+    padding: 3%;
+    margin: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.check-in-button{
+    background-color: #CE2D4F;
+    border: #99203a solid;
+}
+
+.find-shelter-button{
+    background-color: #BD3364;
+    border: #992850 solid;
+}
+
+.shelter-reg-button{
+    background-color: #AB3879;
+    border: #8a2c61 solid;
+
+}
+
+.map-page-button {
+    background-color: #8742A2;
+    border: #5f2d73 solid;
+}
+
+
+.statusButtons{
+    width: 100%;
+    border-radius:10px;
+    padding: 10px;
+    color: black;
+    font-size:15px;
+    background-color: white;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+.seach-users-button {
+    background-color: #4056F4;
+    padding-right:1px;
+    padding-left:1px;
+    color: white;
+}
+
+
+.safe{
+    border-color: #4056F4;
+    border-width: 2px;
+}
+.warning{
+    border-color: #8742A2;
+    border-width: 2px;
+}
+.evacuating{
+    border-color: #AB3879;
+    border-width: 2px;
+}
+.danger{
+    border-color: #BD3364;
+    border-width: 2px;
+}
+
+.submit{
+    background-color: #4056F4;
+    border-width: 2px;
+    border: #2c3db8 solid;
+    color: white;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+
+/* .statusBanner{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    color:#CE2D4F;
+    font-weight: bold;
+    font-size: 18;
+}
+
+.userStatusRow{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    width: 100%;
+    vertical-align: middle;
+    align-self:center;
+    line-height: 70px;
+    height: 70px;
+}
+
+.userStatuses{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items:center;
+    align-content: center;
+    align-self: center;
+}
+
+.userStatusx{
+  vertical-align: middle;
+}
+
+.userIcon{
+  display: inline-block;
+}
+ */

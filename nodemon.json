@@ -1,0 +1,5 @@
+{
+    "watch": ["public", "pages"],
+    "ext": "js html css",
+    "delay": "3"
+  }

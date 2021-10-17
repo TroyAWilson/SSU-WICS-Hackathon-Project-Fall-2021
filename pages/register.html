@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script async
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTFDnlZz2hTwKzYyvqyLmMWlwv0P0m_LY&callback=initMap&libraries=&v=weekly"
+        ></script>
+        <script src="/static/scripts/src.js"></script> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/styles/style.css">
+        <title>Register with FireStop</title>
+    </head>
+    <body>
+        <!-- Header logo and nav -->
+        <div>
+            <div class="header-background">
+                <div>
+                    <img src="/static/images/fire.svg" alt="Fire Logo">
+                    <h2 style="display:inline-block;">Fire Stop</h2>
+                </div>
+            </div>
+            <div style="margin-top: 10px;">
+                <a href="/"><button class="map-page-button">Home</button></a>
+                <a href="/register"><button onclick="checkIfRegsitered()" class="check-in-button">Check In</button></a>
+                <a href="/shelterreg"><button class="shelter-reg-button">Shelter Register</button></a>
+            </div>
+        </div>
+
+        <div class="header">
+        <h2>Check in with your community & find a shelter near you</h2>
+        <form action = "/userlist">
+            <label for ="firstname">
+                <input type="text" required id= "firstname" name = "registration" placeholder="First name">
+            </label>
+
+            <br><br>
+
+            <label for ="lastname">
+                <input type="text" required id= "lastname" name = "registration" placeholder="Last name">
+            </label>
+
+            <br><br>
+
+            <label for ="email">
+                <input type="text" required id= "email" name = "registration" placeholder="Email address">
+            </label>
+
+            <br><br>
+
+            <label for ="password">
+                <input type="password" required id= "password" name = "registration" placeholder="Password">
+            </label>
+
+            <br><br>
+
+            <p>Is your home in an evacuation zone?</p>
+            <label>
+                <input type="radio" name = "homestatus" value = "yes"> Yes </label> 
+            <label>
+                <input type="radio" name = "homestatus" value = "no"> No 
+            </label>
+            <br>
+            <br>
+
+            <p>What are your evacuation plans?</p>
+            <label>
+                <input type="radio" name = "evacstatus" value = "already"> I'm already evacuated
+            </label> 
+            <label style="display:block;">
+                <input type="radio" name = "evacstatus" value = "currently"> I'm currently evacuating
+            </label>
+            <label style="display:block;">
+                <input type="radio" name = "evacstatus" value = "no"> I'm not evacuating
+            </label>
+            <br>
+
+            <p>Do you need help evacuating with large animals?</p>
+            <label>
+                <input type="radio" name = "animals" value = "yes"> Yes 
+            </label> 
+            <label>
+                <input type="radio" name = "animals" value = "no"> No 
+            </label> 
+            <br>
+            <br>
+
+            <p>Are you able to provide help evacuating large animals?</p>
+            <label>
+                <input type="radio" name = "helpanimals" value = "yes"> Yes 
+            </label> 
+            <label>
+                <input type="radio" name = "evacstatus" value = "no"> No 
+            </label>
+
+            <button style="display:block; margin-top:15px;" class="submit" type="submit">Submit</button>
+
+        </form>
+    </div>
+    </body>
+
+    <foot>
+
+    </foot>
+</html>
