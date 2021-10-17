@@ -1,8 +1,8 @@
-const {newUser, getUsers, newShelter, getShelters} = require('./DB');
+const {newUser, getUsers, newShelter, getShelters, updateStatus} = require('./DB');
 
 async function test()
 {
-    var shelters = await getShelters();
+    var shelters = await updateStatus(40, "Test Status");
 }
 
 test();

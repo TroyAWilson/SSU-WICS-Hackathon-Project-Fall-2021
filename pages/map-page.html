@@ -1,50 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTFDnlZz2hTwKzYyvqyLmMWlwv0P0m_LY&callback=initMap&libraries=&v=weekly"
-    ></script>
-    <script src="/static/scripts/src.js"></script> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/styles/style.css">
-    <title>Fire Stop - Fire Safety Checkin</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script async
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTFDnlZz2hTwKzYyvqyLmMWlwv0P0m_LY&callback=initMap&libraries=&v=weekly">
+   </script><script src="/static/scripts/src.js"></script>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/static/styles/style.css">
+   <title>Fire Stop - Fire Safety Checkin</title>
 </head>
 <body>
-    
-    <!-- Header logo and nav -->
-    <div>
-        <div class="header-background">
-            <div>
-                <img src="/static/images/fire.svg" alt="Fire Logo">
-                <h2 style="display:inline-block;">Fire Stop</h2>
-            </div>
-        </div>
-        <div style="margin-top: 10px;">
-            <a href="/"><button class="map-page-button">Home</button></a>
-            <a href="/register"><button onclick="checkIfRegsitered()" class="check-in-button">Check In</button></a>
-            <a href="/shelterreg"><button class="shelter-reg-button">Shelter Register</button></a>
-        </div>
-  </div>
-
-    <!-- Header logo and nav
-    <div class="header">
-        <div class="mb-1">
-            <img src="/static/images/fire.svg" alt="Fire Logo">
-            <h2 style="display:inline-block;">Fire Stop</h2>
-        </div>
-        <div>
-            <a href="/map-page"><button class="map-page-button">Home</button></a>
-            <a href="/register"><button class="check-in-button">Check In</button></a>
-            <a href="/shelterreg"><button class="shelter-reg-button">Shelter Register</button></a>
-        </div>
-  `   </div> -->
-
-  <div id="map"></div>
+  
+   <!-- Header logo and nav -->
+   <div>
+       <div class="header-background">
+           <div>
+               <img src="/static/images/fire.svg" style="padding-left:10px;" alt="Fire Logo">
+               <h2 style="display:inline-block;">Fire Stop</h2>
+               <p class="catchphrase"> Your real time fire alert and safety resource</p>
+           </div>
+       </div>
+       <div style="margin-top: 10px;">
+           <a href="/"><button class="map-page-button">Home</button></a>
+           <a href="/register"><button onclick="checkIfRegsitered()" class="check-in-button">Check In</button></a>
+           <a href="/shelterreg"><button class="shelter-reg-button">Shelter Register</button></a>
+       </div>
+ </div>
+ 
+ <div id="map"></div>
 </body>
 </html>

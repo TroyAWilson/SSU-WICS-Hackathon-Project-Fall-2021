@@ -1,76 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script async
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTFDnlZz2hTwKzYyvqyLmMWlwv0P0m_LY&callback=initMap&libraries=&v=weekly"
-        ></script>
-        <script src="/static/scripts/src.js"></script> 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/static/styles/style.css">
-        <title>Register Shelter</title>
-    </head>
+   <head>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="/static/styles/style.css">
+       <title>Register Shelter</title>
+   </head>
+ 
+   <body>
+ 
+       <!-- Header logo and nav -->
+       <div>
+           <div class="header-background">
+               <div>
+                   <img src="/static/images/fire.svg" alt="Fire Logo">
+                   <h2 style="display:inline-block;">Fire Stop</h2>
+                   <p class="catchphrase"> Your real time fire alert and safety resource</p>
+               </div>
+           </div>
+           <div style="margin-top: 10px;">
+           <a href="/"><button class="map-page-button">Home</button></a>
+           <a href="/register"><button onclick="checkIfRegsitered()" class="check-in-button">Check In</button></a>
+           <a href="/shelterreg"><button class="shelter-reg-button">Shelter Register</button></a>
+           </div>
+       </div>
+ 
+   <div class="header">
+       <h2 class="intro">Register your shelter to be added to our interactive shelter map</h2>
+       <form style="margin-top: 10px;">
+           <label for ="sheltername">Shelter name
+                <br>    
+               <input class="shelterInput" type="text" required id= "sheltername" name = "shelterreg">
+           </label>
+ 
+           <br><br>
+ 
+           <label for ="shelterlocation">Shelter location
+            <br>   
+               <input class="shelterInput" type="text" required id= "shelterlocation" name = "shelterreg">
+           </label>
+ 
+           <br><br>
 
-    <body>
-
-        <!-- Header logo and nav -->
-        <div>
-            <div class="header-background">
-                <div>
-                    <img src="/static/images/fire.svg" alt="Fire Logo">
-                    <h2 style="display:inline-block;">Fire Stop</h2>
-                </div>
-            </div>
-            <div style="margin-top: 10px;">
-            <a href="/"><button class="map-page-button">Home</button></a>
-            <a href="/register"><button onclick="checkIfRegsitered()" class="check-in-button">Check In</button></a>
-            <a href="/shelterreg"><button class="shelter-reg-button">Shelter Register</button></a>
-            </div>
-        </div>
-
-    <div class="header">
-        <h2>Check in with your community & find a shelter near you</h2>
-        <form action = "/shelterlist">
-            <label for ="sheltername">
-                <input type="text" required id= "sheltername" name = "shelterreg" placeholder="Shelter name">
-            </label>
-
-            <br><br>
-
-            <label for ="shelterlocation">
-                <input type="text" required id= "shelterlocation" name = "shelterreg" placeholder="Shelter location">
-            </label>
-
-            <br><br>
-
-            <label for ="shelterphone">
-                <input type="text" required id= "shelterphone" name = "shelterreg" placeholder="Phone number">
-            </label>
-
-            <br><br>
-
-            <label for ="capacity">
-                <input type="text" required id= "capacity" name = "shelterreg" placeholder="Capacity">
-            </label>
+           <label for ="shelterlat">Shelter latitude
+            <br>   
+            <input class="shelterInput" type="text" required id= "shelterlat" name = "shelterreg">
+           </label>
 
             <br><br>
-
-            <label for ="adminpassword">
-                <input type="password" required id= "adminpassword" name = "adminpassword" placeholder="Password">
+ 
+            <label for ="shelterlon">Shelter longitude
+                <br>   
+                <input class="shelterInput" type="text" required id= "shelterlon" name = "shelterreg">
             </label>
+    
+            <br><br>
 
-            <button style="display:block; margin-top:15px;" class="submit" type="submit">Submit</button>
-            <!-- <a href = /userlist.html><button type="submit">Submit</button></a> -->
-        </form>
-        </div>
-    </body>
+           <label for ="shelterphone">Shelter phone number
+            <br>   
+               <input class="shelterInput" type="text" required id= "shelterphone" name = "shelterreg">
+           </label>
+ 
+           <br><br>
+ 
+           <label for ="capacity">Shelter capacity
+            <br>   
+               <input class="shelterInput" type="text" required id= "capacity" name = "shelterreg">
+           </label>
+ 
+           <br><br>
+ 
+           <label for ="adminpassword">Shelter admin password
+            <br>   
+               <input class="shelterInput" type="password" required id= "adminpassword" name = "adminpassword">
+           </label>
+ 
+           <button id="shelterreg-submit" type="submit" style="display:block; margin-top:15px;" >Submit</button>
+           <!-- <a href = /userlist.html><button type="submit">Submit</button></a> -->
+       </form>
+       </div>
+       <script>
 
-    <foot>
+            $("form").submit((e) => {
+                e.preventDefault();
+            })
 
-    </foot>
+            const nameField = $("#sheltername");
+            const addressField = $("#shelterlocation");
+            const latField = $("#shelterlat");
+            const lonField = $("#shelterlon");
+            const phoneField = $("#shelterphone");
+            const capacityField = $("#capacity");
+            const subbtn = $("#shelterreg-submit");
+            subbtn.on("click", async (e) => {
+                e.preventDefault();
+                var params = {
+                    name: nameField.val(),
+                    address: addressField.val(),
+                    lat: latField.val(),
+                    lon: lonField.val(),
+                    phone: phoneField.val(),
+                    capacity: capacityField.val()
+                }
+                await $.ajax({
+                    type: "POST",
+                    url: '/api/shelters',
+                    data: JSON.stringify(params),
+                    contentType: "application/json; charset=utf-8",
+                    success : function(data) {              
+                        console.log(data);
+                    },
+                    error : function(request,error)
+                    {
+                        console.error(error);
+                    }
+                });
+            })
+       </script>
+   </body>
+ 
+   <foot>
+ 
+   </foot>
 </html>

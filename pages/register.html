@@ -22,60 +22,61 @@
                 <div>
                     <img src="/static/images/fire.svg" alt="Fire Logo">
                     <h2 style="display:inline-block;">Fire Stop</h2>
+                    <p class="catchphrase"> Your real time fire alert and safety resource</p>
                 </div>
             </div>
             <div style="margin-top: 10px;">
                 <a href="/"><button class="map-page-button">Home</button></a>
                 <a href="/register"><button onclick="checkIfRegsitered()" class="check-in-button">Check In</button></a>
-                <a href="/shelterreg"><button class="shelter-reg-button">Shelter Register</button></a>
+                <a href="/shelterreg"><button class="shelter-reg-button">Add Shelter</button></a>
             </div>
         </div>
 
         <div class="header">
-        <h2>Check in with your community & find a shelter near you</h2>
-        <form action = "/userlist">
-            <label for ="firstname">
-                <input type="text" required id= "firstname" name = "registration" placeholder="First name">
+        <h2 class="intro" >Check in with your community & find a shelter near you!</h2>
+        <form action = "/api/user" method = "POST">
+            <label for ="firstname">First name
+                <input type="text" required id= "firstname" name = "registration">
             </label>
 
             <br><br>
 
-            <label for ="lastname">
-                <input type="text" required id= "lastname" name = "registration" placeholder="Last name">
+            <label for ="lastname">Last name
+                <input type="text" required id= "lastname" name = "registration">
             </label>
 
             <br><br>
 
-            <label for ="email">
-                <input type="text" required id= "email" name = "registration" placeholder="Email address">
+            <label for ="email">Email address
+                <input type="text" required id= "email" name = "registration">
             </label>
 
             <br><br>
 
-            <label for ="password">
-                <input type="password" required id= "password" name = "registration" placeholder="Password">
+            <label for ="password">Password
+                <input type="password" required id= "password" name = "registration">
             </label>
 
             <br><br>
 
             <p>Is your home in an evacuation zone?</p>
             <label>
-                <input type="radio" name = "homestatus" value = "yes"> Yes </label> 
+                <input type="radio" name = "evacstatus" value = "safe"> Yes </label> 
             <label>
-                <input type="radio" name = "homestatus" value = "no"> No 
+                <input type="radio" name = "evacstatus" value = "no"> No 
             </label>
             <br>
             <br>
 
             <p>What are your evacuation plans?</p>
             <label>
-                <input type="radio" name = "evacstatus" value = "already"> I'm already evacuated
+                <input type="radio" name = "evacstatus" value = "evacuated"> I'm already evacuated
             </label> 
             <label style="display:block;">
-                <input type="radio" name = "evacstatus" value = "currently"> I'm currently evacuating
+                <input type="radio" name = "evacstatus" value = "evacuating"> I'm currently evacuating
             </label>
             <label style="display:block;">
-                <input type="radio" name = "evacstatus" value = "no"> I'm not evacuating
+                <input type="radio" name = "evacstatus" value = "not evacuating"> I'm not evacuating
             </label>
             <br>
 
@@ -94,13 +95,14 @@
                 <input type="radio" name = "helpanimals" value = "yes"> Yes 
             </label> 
             <label>
-                <input type="radio" name = "evacstatus" value = "no"> No 
+                <input type="radio" name = "helpanimals" value = "no"> No 
             </label>
 
             <button style="display:block; margin-top:15px;" class="submit" type="submit">Submit</button>
 
         </form>
     </div>
+
     </body>
 
     <foot>

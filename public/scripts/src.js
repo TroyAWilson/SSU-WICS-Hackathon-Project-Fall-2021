@@ -103,6 +103,8 @@ async function initMap() {
         }
     });
 
+    console.log(holdData)    
+
     holdData.forEach( function(shelter){
         shelter_list.push(buildShelter(shelter));
     })

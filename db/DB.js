@@ -68,8 +68,20 @@ async function getShelters()
     return shelters;
 }
 
+async function updateStatus(id, status)
+{
+    var user;
+    await supabase_client.from("User").update({status: status}).match({id: id}).then(
+        (res, err) => {
+            user = res['data'];
+        }
+    )
+    return user;
+}
+
 module.exports.newUser = newUser;
 module.exports.getUsers = getUsers;
+module.exports.updateStatus = updateStatus;
 
 module.exports.newShelter = newShelter;
 module.exports.getShelters = getShelters;
