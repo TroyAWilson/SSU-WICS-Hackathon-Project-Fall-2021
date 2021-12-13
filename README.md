@@ -1,7 +1,7 @@
 # FireStop: Fire Safety App
 ### SCE Hacks, October 15-17, 2021
 ### Sonoma State University WICS Club
-
+[Project live link](https://ssu-wics-firestop.herokuapp.com/)
 ---
 
 ## Description
